@@ -1,0 +1,37 @@
+.profile-pic-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.profile-pic {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-container:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  visibility: visible;
+  opacity: 1;
+}
+
+.profile-pic-container::after {
+  content: "";
+  visibility: hidden;
+  opacity: 0;
+}

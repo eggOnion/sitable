@@ -1,0 +1,102 @@
+body,
+html {
+  height: 100%;  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Flex container to center content */
+.booking-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Styling for the booking form */
+.booking-container form {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0.7, 0.7);
+}
+
+/* Center the heading text */
+h2 {
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Style for labels */
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Style for input and select elements */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: #229954;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #27ae60;
+}
+.edit-btn{
+  display: block;  
+  width: 50%;          
+  margin: 20px auto 5px auto;
+  font-weight: bold;    
+}
+
+/* Disabled state for the button */
+button:disabled {
+  background: grey;
+  cursor: not-allowed;
+}
+
+/* Style for error messages */
+.error-message {
+  color: red;
+  margin-top: 5px;
+  font-size: 0.875em;
+}
+
+.view-my-booking {
+  background-color: #dc7633;
+  font-weight: bold;
+  border-radius: 25px;
+  border: 2px solid #dc7633;
+  transition: all 0.3s ease-in-out;
+}
+.view-my-booking:hover {
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 18px;
+  border: 2px solid #dc7633;
+  color: black;
+}

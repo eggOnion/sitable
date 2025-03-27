@@ -1,0 +1,47 @@
+.confirm-dialog-container {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px; 
+  border-radius: 12px; 
+  text-align: center; 
+  width: 280px;
+}
+
+.confirm-dialog-title{
+  text-decoration: underline;
+  color: red;
+}
+
+.confirm-dialog-container h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.confirm-dialog-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button[mat-button] {
+  background: #95a5a6;
+  color: white;
+  font-weight: bold;
+}
+
+button[color="warn"] {
+  background: #28b463;
+  color: white;
+  font-weight: bold;
+}

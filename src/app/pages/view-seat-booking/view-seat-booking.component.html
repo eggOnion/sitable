@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>My Bookings</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Seat Number</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+        <th>Charges</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.id }}</td>
+        <td>{{ booking.firstName }}</td>
+        <td>{{ booking.lastName }}</td>
+        <td>{{ booking.seatNumber }}</td>
+        <td>{{ booking.startTime }}</td>
+        <td>{{ booking.endTime }}</td>
+        <td>{{ booking.charges | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="mod-btn">
+    <button type="button" [routerLink]="['/edit-seat-booking']">
+      Edit Booking
+    </button>
+    <button
+      class="del-booking"
+      style="background-color: #c82333"
+      type="button"
+      [routerLink]="['/delete-seat-booking']"
+    >
+      Delete Booking
+    </button>
+  </div>
+</div>

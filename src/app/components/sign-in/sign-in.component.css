@@ -1,0 +1,19 @@
+.sign-in-container button {
+  background-color: #28b463;
+  color: white;
+  border: none;
+  margin-top: 5px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 2px solid #28b463;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sign-in-container button:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid #28b463;
+}

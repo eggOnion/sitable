@@ -1,0 +1,46 @@
+<div class="booking-container">
+  <form [formGroup]="editForm" (ngSubmit)="editBookSeat()">
+    <h2>Edit a Seat</h2>
+
+    <!-- Booking ID Input Field -->
+    <label for="booking-id">Enter Booking ID:</label>
+    <input type="text" id="booking-id" formControlName="bookingId" required />
+
+    <!-- Seat Selection Dropdown -->
+    <label for="seat">Select Seat:</label>
+    <select id="seat" formControlName="seatNumber" required>
+      <option value="" disabled selected>Select a seat</option>
+      <option *ngFor="let seat of seatNumbers" [value]="seat">
+        Seat {{ seat }}
+      </option>
+    </select>
+
+    <!-- Date Picker -->
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" formControlName="date" required />
+
+    <!-- Start Time Dropdown -->
+    <label for="start-time">Start Time:</label>
+    <select id="start-time" formControlName="startTime" required>
+      <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+    </select>
+
+    <!-- End Time Dropdown -->
+    <label for="end-time">End Time:</label>
+    <select id="end-time" formControlName="endTime" required>
+      <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+    </select>
+
+    <button type="submit" [disabled]="editForm.invalid">Submit</button>
+    
+
+
+    <button
+      type="button"
+      [routerLink]="['/view-seat-booking']"    
+    >
+      My Booking
+    </button> 
+   
+  </form>
+</div>

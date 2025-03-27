@@ -1,0 +1,65 @@
+<div class="seat-container">
+  <h2>Check for Available Seats</h2>
+
+  <label for="date">Select Date:</label>
+  <input type="date" id="date" [formControl]="selectedDate" />
+
+  <!-- Fetch Seats Button -->
+  <button class="fetch-btn" (click)="fetchAvailableSeats()">Submit</button>
+
+  <!-- Seat Buttons -->
+  <div class="seat-grid">
+    <button
+      *ngFor="let seat of seatNumbers"
+      class="seat-button"
+      (click)="selectSeat(seat)"
+    >
+      {{ seat }}
+    </button>
+
+    <!-- Door Box -->
+    <div class="door-box">Door</div>
+  </div>
+
+  <!-- Display Selected Seat Info in a Table with Pagination -->
+  <div class="seat-info" *ngIf="selectedSeat() !== null">
+    <h3>Available Timing for Seat {{ selectedSeat() }}</h3>
+
+    <table class="seat-table">
+      <thead>
+        <tr>
+          <th>Start Time</th>
+          <th>End Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let time of displayedTimes()">
+          <td>{{ time.startTime }}</td>
+          <td>{{ time.endTime }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Pagination Buttons -->
+    <div class="pagination-controls">
+      <button
+        class="back-btn"
+        *ngIf="pageIndex > 0"
+        (click)="loadPreviousPage()"
+      >
+        Back
+      </button>
+      <button
+        class="show-more-btn"
+        *ngIf="(pageIndex + 1) * rowsPerPage < allTimes().length"
+        (click)="loadNextPage()"
+      >
+        Next
+      </button>
+    </div>
+
+    <button class="clear-btn" (click)="clearSelection()">
+      Clear Selection
+    </button>
+  </div>
+</div>

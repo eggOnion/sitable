@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class SharedService {
+
+  private selectedEmail: string | null = null;
+
+  setEmail(email: string) {
+    this.selectedEmail = email;
+  }
+
+  getEmail(): string | null {
+    return this.selectedEmail;
+  }
+}

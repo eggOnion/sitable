@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Delete Seat Booking</h2>
+  <form [formGroup]="deleteForm" (ngSubmit)="confirmDelete()">
+    <div class="form-group">
+      <label for="bookingId">Booking ID:</label>
+      <input
+        type="text"
+        id="bookingId"
+        formControlName="bookingId"
+        class="form-control"
+        required
+      />
+    </div>
+    <div class="mod-btn">
+      <button type="submit" class="del-btn" [disabled]="deleteForm.invalid">
+        Submit
+      </button>
+      <button
+        type="button"
+        class="view-my-booking"
+        [routerLink]="['/view-seat-booking']"
+      >
+        My Booking
+      </button>
+    </div>
+  </form>
+</div>
