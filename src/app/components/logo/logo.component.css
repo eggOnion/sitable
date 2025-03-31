@@ -1,0 +1,11 @@
+.clickable-logo {
+    width: 120px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .clickable-logo:hover {
+    transform: scale(1.1);
+  }
+  

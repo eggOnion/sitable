@@ -1,0 +1,52 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.mod-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  padding: 20px 0;
+  gap: 25px;
+}
+
+.del-btn {
+  background-color: #229954;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.del-btn:hover {
+  background-color: #27ae60;
+}
+
+.view-my-booking {
+  padding: 10px 20px;
+  background-color: #dc7633;
+  font-weight: bold;
+  color: white;
+  border-radius: 25px;
+  border: 2px solid #dc7633;
+  transition: all 0.3s ease-in-out;
+}
+.view-my-booking:hover {
+  background-color: transparent;
+  font-weight: bold;
+  border-radius: 18px;
+  border: 2px solid #dc7633;
+  color: black;
+}

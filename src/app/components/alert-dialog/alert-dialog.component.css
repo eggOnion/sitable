@@ -1,0 +1,31 @@
+.alert-dialog {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+}
+
+.alert-dialog h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.alert-dialog p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: #007bff;
+  color: black;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  /* opacity: 0.8; */
+  background-color: #3498db;
+}

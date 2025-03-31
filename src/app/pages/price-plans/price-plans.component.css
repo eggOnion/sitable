@@ -1,0 +1,49 @@
+.pricing-container {
+  text-align: center;
+  margin-top: 120px;
+  padding-bottom: 120px;
+}
+
+.pricing-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2e4053;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.pricing-table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 15px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.pricing-table thead {
+  background: #27ae60;
+  color: white;
+}
+
+.pricing-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.pricing-table tbody tr:hover {
+  background: #d1f2eb;
+  transition: 0.3s ease-in-out;
+}
+
+.pricing-table td {
+  color: #2c3e50;
+  font-weight: 500;
+}

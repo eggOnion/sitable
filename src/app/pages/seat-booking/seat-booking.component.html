@@ -1,0 +1,37 @@
+<div class="booking-container">
+  <form [formGroup]="bookingForm" (ngSubmit)="confirmBook()">
+    <h2>Book a Seat</h2>
+
+    <label for="seat">Select Seat:</label>
+    <select id="seat" formControlName="seatNumber" required>
+      <option value="" disabled selected>Select a seat</option>
+      <option *ngFor="let seat of seatNumbers" [value]="seat">
+        Seat {{ seat }}
+      </option>
+    </select>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" formControlName="date" required />
+
+    <label for="start-time">Start Time:</label>
+    <select id="start-time" formControlName="startTime" required>
+      <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+    </select>
+
+    <label for="end-time">End Time:</label>
+    <select id="end-time" formControlName="endTime" required>
+      <option *ngFor="let time of times" [value]="time">{{ time }}</option>
+    </select>
+
+    <button class="book-btn" type="submit" [disabled]="bookingForm.invalid">
+      Book Seat
+    </button>
+    <button
+      type="button"
+      class="view-my-booking"
+      [routerLink]="['/view-seat-booking']"
+    >
+      My Booking
+    </button>
+  </form>
+</div>

@@ -1,0 +1,231 @@
+.seat-container {
+  text-align: center;
+  padding: 60px;
+}
+
+#date {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.fetch-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.fetch-btn:hover {
+  background-color: #218838;
+}
+
+.seat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three main sections */
+  grid-template-rows: repeat(5, 50px); /* Five rows */
+  gap: 15px 50px; /* Space between buttons */
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px 100px;
+  padding-bottom: 150px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+  position: relative; /* For absolute positioning of "Door" */
+}
+
+.door-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: #dc7633;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.seat-button {
+  background-color: #007bff;
+  border: 2px solid #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  width: 60px;
+}
+
+.seat-button:hover {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: black;
+}
+
+/* Left Column */
+.seat-button:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+} /* Seat 1 */
+.seat-button:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+} /* Seat 2 */
+.seat-button:nth-child(3) {
+  grid-column: 1;
+  grid-row: 3;
+} /* Seat 3 */
+.seat-button:nth-child(4) {
+  grid-column: 1;
+  grid-row: 4;
+} /* Seat 4 */
+.seat-button:nth-child(5) {
+  grid-column: 1;
+  grid-row: 5;
+} /* Seat 5 */
+
+/* Middle Section - Left */
+.seat-button:nth-child(6) {
+  grid-column: 2;
+  grid-row: 1;
+} /* Seat 6 */
+.seat-button:nth-child(7) {
+  grid-column: 2;
+  grid-row: 2;
+} /* Seat 7 */
+.seat-button:nth-child(8) {
+  grid-column: 2;
+  grid-row: 3;
+} /* Seat 8 */
+.seat-button:nth-child(9) {
+  grid-column: 2;
+  grid-row: 4;
+} /* Seat 9 */
+
+/* Middle Section - Right */
+.seat-button:nth-child(10) {
+  grid-column: 3;
+  grid-row: 1;
+} /* Seat 10 */
+.seat-button:nth-child(11) {
+  grid-column: 3;
+  grid-row: 2;
+} /* Seat 11 */
+.seat-button:nth-child(12) {
+  grid-column: 3;
+  grid-row: 3;
+} /* Seat 12 */
+.seat-button:nth-child(13) {
+  grid-column: 3;
+  grid-row: 4;
+} /* Seat 13 */
+
+/* Right Column */
+.seat-button:nth-child(14) {
+  grid-column: 4;
+  grid-row: 1;
+} /* Seat 14 */
+.seat-button:nth-child(15) {
+  grid-column: 4;
+  grid-row: 2;
+} /* Seat 15 */
+.seat-button:nth-child(16) {
+  grid-column: 4;
+  grid-row: 3;
+} /* Seat 16 */
+.seat-button:nth-child(17) {
+  grid-column: 4;
+  grid-row: 4;
+} /* Seat 17 */
+.seat-button:nth-child(18) {
+  grid-column: 4;
+  grid-row: 5;
+} /* Seat 18 */
+
+/* Table Styling */
+.seat-table {
+  width: 60%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.seat-table th,
+.seat-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.seat-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* Pagination Buttons */
+.pagination-controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.show-more-btn,
+.back-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.back-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #0056b3;
+}
+
+.show-more-btn {
+  background-color: #27ae60;
+  color: white;
+}
+
+.show-more-btn:hover {
+  background-color: #229954;
+}
+
+.clear-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clear-btn:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,14 @@
+<div class="login-container">
+  <h2>Choose an account to Login</h2>
+  <ul>
+    <li *ngFor="let emailObj of whitelistedEmails">
+      <a href="javascript:void(0);" (click)="onLogin(emailObj.email)">
+        {{ emailObj.email }}
+      </a>
+    </li>
+  </ul>
+
+  <div *ngIf="errorMessage" class="error">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

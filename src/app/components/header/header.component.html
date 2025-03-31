@@ -1,0 +1,16 @@
+<header [class.hidden]="isHidden">
+  <div class="logo-container">
+    <app-logo></app-logo>
+  </div>
+  <nav class="nav-container">
+    <div class="nav-bar">
+      <a routerLink="/price-plans" routerLinkActive="active" class="price-plans" style="cursor: pointer; margin-top: 10px;">Price Plans</a>
+      <a routerLink="/seat-availability" routerLinkActive="active" class="seat-availability" style="cursor: pointer; margin-top: 10px;">Available Seats</a>
+      <a *ngIf="isAuthenticated" routerLink="/view-seat-booking" routerLinkActive="active" class="view-seat-booking" style="cursor: pointer; margin-top: 10px;">My Bookings</a>
+      <!-- <a routerLink="/view-seat-booking" routerLinkActive="active" class="view-seat-booking" style="cursor: pointer; margin-top: 10px;">My Bookings</a> -->
+      <app-profile-pic-loader></app-profile-pic-loader>
+      <app-sign-in></app-sign-in>
+      <app-logout></app-logout>
+    </div>
+  </nav>
+</header>
